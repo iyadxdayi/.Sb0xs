@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sb0xs - شركة تقنية مبتكرة</title>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.24.5/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function Navbar() {
+            return (
+                <nav className="bg-blue-600 p-4 shadow-lg">
+                    <div className="container mx-auto flex justify-between items-center">
+                        <img src="logo.png" alt="Sb0xs Logo" className="h-12" />
+                        <ul className="flex space-x-6">
+                            <li><a href="#home" className="text-white hover:text-blue-200">الرئيسية</a></li>
+                            <li><a href="#about" className="text-white hover:text-blue-200">عن الشركة</a></li>
+                            <li><a href="#services" className="text-white hover:text-blue-200">الخدمات</a></li>
+                            <li><a href="#team" className="text-white hover:text-blue-200">الفريق</a></li>
+                            <li><a href="#contact" className="text-white hover:text-blue-200">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            );
+        }
+
+        function Hero() {
+            return (
+                <section id="home" className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20">
+                    <div className="container mx-auto text-center">
+                        <h2 className="text-4xl font-bold mb-4">مرحبًا بك في Sb0xs</h2>
+                        <p className="text-lg mb-6">نقدم حلولًا تقنية مبتكرة لتطوير أعمالك.</p>
+                        <a href="#contact" className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100">تواصلوا معنا</a>
+                    </div>
+                </section>
+            );
+        }
+
+        function About() {
+            return (
+                <section id="about" className="py-16">
+                    <div className="container mx-auto text-center">
+                        <h2 className="text-3xl font-bold mb-6">عن Sb0xs</h2>
+                        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                            Sb0xs هي شركة تقنية رائدة تقدم حلولًا مبتكرة في مجالات تطوير البرمجيات، الذكاء الاصطناعي، والتحول الرقمي.
+                            نسعى لتمكين الشركات من تحقيق أهدافها من خلال التكنولوجيا المتطورة.
+                        </p>
+                    </div>
+                </section>
+            );
+        }
+
+        function Services() {
+            return (
+                <section id="services" className="bg-gray-100 py-16">
+                    <div className="container mx-auto">
+                        <h2 className="text-3xl font-bold text-center mb-10">خدماتنا</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-xl font-semibold mb-4">تطوير البرمجيات</h3>
+                                <p className="text-gray-600">تصميم وتطوير تطبيقات مخصصة تلبي احتياجات عملك.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-xl font-semibold mb-4">الذكاء الاصطناعي</h3>
+                                <p className="text-gray-600">حلول ذكاء اصطناعي متقدمة لتحليل البيانات وأتمتة العمليات.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-xl font-semibold mb-4">التحول الرقمي</h3>
+                                <p className="text-gray-600">إستراتيجيات لتحويل أعمالك إلى العالم الرقمي بسلاسة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        function Team() {
+            return (
+                <section id="team" className="py-16">
+                    <div className="container mx-auto">
+                        <h2 className="text-3xl font-bold text-center mb-10">الأشخاص والفريق</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {/* عضو الفريق الأول */}
+                            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                                <img src="numbers1.jpg" alt="حسن غيث" className="w-24 h-24 rounded-full mx-auto mb-4" />
+                                <h3 className="text-xl font-semibold mb-2">إياد بلقرقيد</h3>
+                                <p className="text-gray-600 mb-4">المؤسس والرئيس التنفيذي</p>
+                                <p className="text-gray-600 mb-4">قائد فريقنا، يمتلك خبرة تزيد عن 15 عامًا في مجال التكنولوجيا وريادة الأعمال.</p>
+                                <div className="flex justify-center space-x-4">
+                                    <a href="https://linkedin.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.897-.633 1.897-1.5 3.5-1.5 2.485 0 4.5 2.015 4.5 4.5v5.5z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://x.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://facebook.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.5v-2h1.5v-2h-1.5c-1.104 0-2 .896-2 2v2h-1v2h1v6h2v-6h1.5v-2z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* عضو الفريق الثاني */}
+                            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                                <img src="numbers2.jpg" alt="سارة المصري" className="w-24 h-24 rounded-full mx-auto mb-4" />
+                                <h3 className="text-xl font-semibold mb-2">كليل نذير</h3>
+                                <p className="text-gray-600 mb-4">مدير التطوير</p>
+                                <p className="text-gray-600 mb-4">خبير في تطوير البرمجيات، يقود فريق المطورين لتقديم حلول تقنية متطورة.</p>
+                                <div className="flex justify-center space-x-4">
+                                    <a href="https://linkedin.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.897-.633 1.897-1.5 3.5-1.5 2.485 0 4.5 2.015 4.5 4.5v5.5z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://x.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://facebook.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.5v-2h1.5v-2h-1.5c-1.104 0-2 .896-2 2v2h-1v2h1v6h2v-6h1.5v-2z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* عضو الفريق الثالث */}
+                            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                                <img src="numbers3.jpg" alt="خالد الشمري" className="w-24 h-24 rounded-full mx-auto mb-4" />
+                                <h3 className="text-xl font-semibold mb-2">منصف بوزيد</h3>
+                                <p className="text-gray-600 mb-4">مدير المشاريع</p>
+                                <p className="text-gray-600 mb-4">مسؤول عن إدارة المشاريع وضمان تسليمها في الوقت المحدد بأعلى جودة.</p>
+                                <div className="flex justify-center space-x-4">
+                                    <a href="https://linkedin.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.897-.633 1.897-1.5 3.5-1.5 2.485 0 4.5 2.015 4.5 4.5v5.5z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://x.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://facebook.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.5v-2h1.5v-2h-1.5c-1.104 0-2 .896-2 2v2h-1v2h1v6h2v-6h1.5v-2z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        function Contact() {
+            return (
+                <section id="contact" className="py-16 bg-gradient-to-r from-blue-600 to-indigo-800 text-white">
+                    <div className="container mx-auto text-center">
+                        <h2 className="text-3xl font-bold mb-6">اتصل بنا</h2>
+                        <div className="max-w-lg mx-auto bg-white text-gray-800 rounded-lg shadow-lg p-6">
+                            {/* الشعار */}
+                            <div className="flex justify-center mb-4">
+                                <img src="logo.png" alt="Sb0xs Logo" className="h-16" />
+                            </div>
+
+                            {/* معلومات الاتصال */}
+                            <div className="text-right">
+                                <p className="text-lg font-semibold mb-2">تواصلوا معنا</p>
+                                <p className="mb-1">📧 <a href="mailto:didododana890@gmail.com" className="text-blue-600 hover:underline">didododana890@gmail.com</a></p>
+                                <p className="mb-1">📞 <a href="tel:+213775337546" className="text-blue-600 hover:underline">+213775337546</a></p>
+                            </div>
+
+                            {/* أيقونات التواصل الاجتماعي */}
+                            <div className="flex justify-center space-x-4 mt-4">
+                                <a href="https://linkedin.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.897-.633 1.897-1.5 3.5-1.5 2.485 0 4.5 2.015 4.5 4.5v5.5z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://x.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://facebook.com" target="_blank" className="text-blue-600 hover:text-blue-800">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.5v-2h1.5v-2h-1.5c-1.104 0-2 .896-2 2v2h-1v2h1v6h2v-6h1.5v-2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            {/* العنوان والمعلومات الإضافية */}
+                            <div className="text-right mt-4">
+                                <p className="mb-1">الجزائر ، عين الدفلى</p>
+                                <p className="mb-1">نحن شركة تقنية رائدة تقدم حلولًا مبتكرة في مجالات تطوير البرمجيات، الذكاء الاصطناعي، والتحول الرقمي.</p>
+                                <p>نسعى لتمكين الشركات من تحقيق أهدافها من خلال التكنولوجيا المتطورة.</p>
+                            </div>
+
+                            {/* توقيع الشركة */}
+                            <p className="text-center text-sm text-gray-500 mt-4">إياد بلقرقيد - المؤسس والرئيس التنفيذي</p>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        function Footer() {
+            return (
+                <footer className="bg-blue-600 text-white py-6">
+                    <div className="container mx-auto text-center">
+                        <p>© 2025 Sb0xs. جميع الحقوق محفوظة.</p>
+                    </div>
+                </footer>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                    <Navbar />
+                    <Hero />
+                    <About />
+                    <Services />
+                    <Team />
+                    <Contact />
+                    <Footer />
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
